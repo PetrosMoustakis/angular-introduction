@@ -1,0 +1,29 @@
+<div class="border border-2 border-danger p-2">
+    <div class="row">
+        <div class="col"> <img src="{{imageUrl}}" alt="{{imageALT}}" title="{{imageTooltip}}">
+            <button disabled=" {{buttonDisabled ? 'disabled' : null }}"
+                class="btn btn-primary ">{{buttonPrompt}}</button>
+        </div>
+        <div class="col"><img [src]="imageUrl" [alt]="imageALT" [title]="imageTooltip">
+            <button [disabled]="buttonDisabled" class="btn btn-primary">{{buttonPrompt}}</button>
+        </div>
+    </div>
+
+    <div class="row mt-2">
+        <div class="col">
+            <button (click)="onButtonClick()" class="btn btn-primary ">Count Clicks</button>
+            <button (click)="onResetClick()" class="ms-2 btn btn-success">Reset</button>
+        </div>
+        <div class="col">
+            Button clicked {{times}} times
+        </div>
+
+    </div>
+
+    <div class="row mt-2">
+        <div class="col">
+            <input id="text" (click)="onInputClick()" (input)="onUserInput($event)" class="inp form-control " type="text">
+        </div>
+        <div class="col">{{userInput}}</div>
+    </div>
+</div>

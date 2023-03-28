@@ -1,2 +1,11 @@
-<h1>Welcome to Angular</h1>
-<p>Nice to meet you Petros</p>
+<div class="m-4 border border-2 border-primary">
+  <p>Welcome to Angular <strong>{{ title }}</strong> application</p>
+  <p>Nice to meet you Petros</p>
+  <app-hello></app-hello>
+  <div class="row mb-2">
+    <div class="col"><app-hello></app-hello></div>
+    <div class="col"><app-hello></app-hello></div>
+  </div>
+
+  <app-my-hello-component></app-my-hello-component>
+</div>
